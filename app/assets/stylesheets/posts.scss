@@ -1,3 +1,124 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@font-face {
+font-family: 'Inter-Regular';
+src: url('Inter-Regular.ttf') format('TrueType');
+font-weight: 500;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Inter-Bold';
+src: url('Inter-Bold.ttf') format('TrueType');
+font-weight: 500;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Inter-Medium';
+src: url('Inter-Medium.ttf') format('TrueType');
+font-weight: 500;
+font-style: normal;
+font-display: swap;
+}
+
+
+
+.header h1,.header_second_row h1 {
+  font-family: 'Inter-Medium';
+  font-size: 22px;
+  display: inline-block;
+}
+.header h1 {
+ padding-right: 4%;
+ color: white;
+}
+.naming {
+  float: right;
+  padding-right: 0% !important;
+  padding-left: 4%;
+}
+.header_second_row {
+    margin-top: 4%;
+}
+.header_second_row h1 {
+  padding: 1vw 3vw 1.1vw;
+  color: black;
+  background-color: white;
+  border-radius: 2vw;
+  margin: 0 !important;
+}
+.new_post {
+  font-family: "Inter-Medium";
+  font-size: 22px;
+  padding: 1vw 3vw 1.1vw;
+  color: white !important;;
+  background-color: #8EA5EB;
+  border-radius: 2vw;
+  text-decoration: none;
+  float: right;
+}
+.photo_block {
+  height: 40vh;
+  position: relative;
+  border-radius: 2vw;
+  display: block;
+  margin: 2vh;
+}
+
+.photo_block img {
+  height: 100%;
+  border-radius: 2vw;
+  // width: 100%;
+}
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  // background-color: #F4ECE1;
+  // width: 25vw;
+  // border-radius: 2vw;
+}
+.post_structure {
+  background-color: #F4ECE1;
+  border-radius: 2vw;
+  position: relative;
+  overflow: hidden;
+  margin: 5vh;
+  // width: 30vw;
+}
+.post_name {
+  font-family: "Inter-Regular";
+  font-size: 15px;
+  padding: 0.5vw 1.5vw 0.6vw;
+  color: black;
+  background-color: white;
+  border-radius: 2vw;
+  display: inline-block;
+  margin: 0.5vh 2vh;
+}
+.post_title {
+  font-family: "Inter-Bold";
+  font-size: 22px;
+  padding: 0.5vw 1.5vw 0.6vw;
+  color: black;
+  background-color: white;
+  border-radius: 2vw;
+  display: block;
+  margin: 0.5vh 2vh;
+  max-width: 30vh;
+}
+.show_button, .edit_button, .destroy_button {
+  font-family: "Inter-Medium";
+  font-size: 15px;
+  padding: 0.5vw 1.5vw 0.6vw;
+  color: white !important;;
+  background-color: #8EA5EB;
+  border-radius: 2vw;
+  text-decoration: none;
+  float: right;
+  margin: 0.5vh 0vh 2vh 2vh;
+}
