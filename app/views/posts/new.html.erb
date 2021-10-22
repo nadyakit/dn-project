@@ -1,5 +1,11 @@
-<h1>Создать пост</h1>
+<div class="header">
+  <h1>О нас</h1>
+  <h1>Промо</h1>
+  <h1>Блог</h1>
+</div>
+
+<div class="header_second_row">
+  <%= link_to 'Обратно', posts_path %>
+</div>
 
 <%= render 'form', post: @post %>
-
-<%= link_to 'Back', posts_path %>
