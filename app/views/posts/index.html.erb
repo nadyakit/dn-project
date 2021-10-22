@@ -2,6 +2,7 @@
 
 <div class="header">
   <h1>О нас</h1>
+  <%# <%= link_to 'О нас', about_path %> %>
   <h1>Промо</h1>
   <h1>Блог</h1>
   <h1 class="naming">B8</h1>
@@ -21,7 +22,7 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-  
+
   <tbody class="posts">
     <% @posts.each do |post| %>
       <tr class="post_structure">
