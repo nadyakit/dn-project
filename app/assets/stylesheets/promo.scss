@@ -304,8 +304,6 @@ select {
   background-color: inherit;
   color: white;
   font-family: "Inter-Regular";
-
-
 }
 
 
@@ -318,9 +316,11 @@ select {
   font-size: 24px;
   font-weight: bold;
   width: 15vw;
-  margin: 30px auto 50px;
+  margin: 50px auto 30px;
+  margin-left: 44vw;
   cursor: pointer;
 }
+
 
 ::-webkit-input-placeholder {
    color: white;
@@ -329,7 +329,6 @@ select {
 .form p {
   text-align: center;
   font-family: "Inter-Regular";
-
   font-size: 24px;
   color: white;
   font-weight: bold;
@@ -354,4 +353,8 @@ select {
   font-family: "Inter-Regular";
   left: 59vh;
   top: 53.5vh;
+}
+
+button {
+  position: relative !important;
 }
