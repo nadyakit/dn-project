@@ -53,7 +53,7 @@ font-display: swap;
   border-radius: 2vw;
   margin: 0 !important;
 }
-.editing {margin: 4% !important;}
+.editing {margin: 4% !important; max-width: 14vw;}
 .new_post, .show_header_second_row a {
   font-family: "Inter-Medium";
   font-size: 22px;
@@ -153,21 +153,29 @@ font-display: swap;
   color: black;
 }
 .image_form label {padding: 0vw 0vw 0.6vw !important;}
-.whole_form input {
+.whole_form input[type="text"] {
   background-color: white;
   border-radius: 2vw;
   border: none;
   height: 4vh;
-  width: 100%;
+  width: 95%;
+  margin: 5px auto 10px;
+    padding: 0 10px;
+    font-size: 18px;
+    border: none;
+    font-family: "Inter-Regular";
+    color: black;
 }
+
 .whole_show {
-  margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
     margin-bottom: 5vh;
     width: 25vw;
     border-radius: 2vw;
     background-color: #F4ECE1;
     padding: 2vw;
+    position: relative;
 }
 .whole_form img {
   width: 100%;
@@ -185,7 +193,9 @@ font-display: swap;
   margin-bottom: 2vh;
 }
 .show_edit_button {
-
+  position: absolute;
+  right: 2vh;
+  bottom: 2vh;
 }
 .comment_author {
   position: relative;
@@ -215,6 +225,29 @@ font-display: swap;
 }
 .show_add_comment {
   margin: 4vh 0vh;
+}
+.author_graph label, .comment_graph label {
+  font-family: "Inter-Regular";
+  font-size: 14px;
+}
+.actions_comments {
+
+}
+.comment_graph textarea, .content_form textarea {
+  width: 92%;
+    height: 20vh;
+    font-family: 'Inter-Regular';
+    margin-bottom: 2vh;
+    border: 0px;
+    padding: 2vh;
+    border-radius: 2vh;
+}
+
+.author_graph input[type="text"] {
+  background-color: white;
+  border: 0px;
+  border-radius: 2vh;
+  margin-bottom: 3vh;
 }
 
 // .show_comments, .show_add_comment {display: table;}
