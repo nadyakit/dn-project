@@ -340,8 +340,8 @@ h4 {
   font-size: 53px;
   padding: 2vw;
 }
-button {
-  position: absolute;
+.button_translate {
+  position: absolute !important;
   right: 2vw;
   bottom: 2vh;
   font-family: "Inter-Regular";
