@@ -1,6 +1,10 @@
+<div class="header">
+  <%= link_to 'О нас', about_path %>
+  <%= link_to 'Промо', promo_path %>
+  <%= link_to 'Блог', posts_path %>
+  <h1 class="naming">B8</h1>
+</div>
+
 <h1 class="editing">Редактирование поста</h1>
 
 <%= render 'form', post: @post %>
-
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
