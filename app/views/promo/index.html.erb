@@ -1,10 +1,7 @@
 
-<%# <%= link_to "About", about_path %> %>
-
   <div class="container">
     <div class="menu">
-      <a class="about" href="#">О нас</a>
-      <a class="promo" href="#">Промо</a>
+      <span class="aaa" ><%= link_to "About", about_path %></span>
     </div>
     <div class="logo">
       <a href="#">бэйт</a>
@@ -16,7 +13,7 @@
     <div class="oval2"></div>
     <div class="oval3"></div>
       <%= image_tag "text1.svg", :class => "text1" %>
-    <h1 class="first_h1">Привет! Мы — «бэйт», поможем тебе понять, чем&nbsp;можно тебе заменить продукт, который&nbsp;ты не ешь</h1>
+    <h1 class="first_h1">Привет! Мы — «бэйт», поможем тебе понять, чем&nbsp;можно тебе заменить продукт, который ты&nbsp;не ешь</h1>
       <%= image_tag "text2.svg", :class => "text2" %>
     <h1 class="first_h2">С нами ты легко сможешь отказаться от&nbsp;витаминов в таблетках </h1>
   </section>
@@ -26,22 +23,33 @@
     <div class="second_text"> <p>Формально мы помогаем найти витаминную альтернативу продуктам животного происхождения в&nbsp;растительной пище. Однако это не&nbsp;совсем точно. На&nbsp;самом деле мы делаем веганскую и&nbsp;вегетарианскую рутину чуточку легче, а&nbsp;также немного оздоравливаем жизни.</p></div>
   </section>
   <section class="blue">
-      <%= image_tag "union1.svg", :class => "text_blue1" %>
-      <!-- <figure class="text_blue1">  <img src="img/union1.svg" alt=""> </figure> -->
-      <p class="first">1\ создайте аккаунт: так&nbsp;вы сможете сохранять статьи и&nbsp;откладывать их на&nbsp;потом</p>
-    <!-- <figure class="text_blue2"> <img src="img/union2.svg" alt=""> </figure> -->
-    <%= image_tag "union2.svg", :class => "text_blue2" %>
-    <p class="second">2\ в личном профиле выберите продукты, которые не хотите есть, чтобы лента подстроилась под&nbsp;вас</p>
-    <!-- <figure class="text_blue3"> <img src="img/union3.svg" alt=""> </figure> -->
-    <%= image_tag "union3.svg", :class => "text_blue3" %>
-    <p class="third">3\ во вкладке «‎Витамины» или&nbsp;«‎Подборки» выберите необходимый продукт</p>
-    <!-- <figure class="text_blue4"> <img src="img/union4.svg" alt=""> </figure> -->
-    <%= image_tag "union4.svg", :class => "text_blue4" %>
 
-    <p class="fourth">4\ читайте статьи, лайкайте&nbsp;и&nbsp;сохраняйте их&nbsp;к себе в&nbsp;личные подборки! </p>
-    <!-- <figure class="fig"><img class="blue_pic" src="img/blue_pic.svg" alt=""></figure> -->
-    <%= image_tag "blue_pic.svg", :class => "blue_pic" %>
 
+  </section>
+  <section class="third_blue_section">
+    <div class="random_class"> <%= image_tag "blue_pic.svg", :class => "blue_pic" %> </div>
+
+  <div class="blue_global">
+    <div class="blue_pics">
+        <div class="pack_1">
+          <%= image_tag "union1.svg", :class => "union1" %>
+          <p class="text_first">1\ создайте аккаунт: так&nbsp;вы сможете сохранять&nbsp;статьи и&nbsp;откладывать их на<br>потом</p>
+        </div>
+        <div class="pack_2">
+          <%= image_tag "union2.svg", :class => "union2" %>
+          <p class="text_second">2\ в личном профиле&nbsp;выберите продукты, которые не&nbsp;хотите есть, чтобы&nbsp;лента подстроилась<br>под&nbsp;вас</p>
+        </div>
+        <div class="pack_3">
+          <%= image_tag "union3.svg", :class => "union3" %>
+          <p class="text_third">3\ во вкладке «‎Витамины» или&nbsp;«‎Подборки» выберите необходимый продукт</p>
+        </div>
+        <div class="pack_4">
+          <%= image_tag "union4.svg", :class => "union4" %>
+          <p class="text_fourth">4\ читайте статьи, лайкайте&nbsp;и&nbsp;сохраняйте их&nbsp;к себе в&nbsp;личные подборки! </p>
+        </div>
+    </div>
+    <div class=""><%= image_tag "mockup1.png", :class => "mockup1" %></div>
+  </div>
   </section>
   <section class="end">
     <%= image_tag "gradient_last.svg", :class => "gradient_last" %>
@@ -60,4 +68,4 @@
   </section>
 
 <!-- <h2>Узнать раньше всех о запуске проекта:</h2> -->
-<%# <%= render "subscribers/form" %> %>
+<%# <%= render "subscribers/form" %>
