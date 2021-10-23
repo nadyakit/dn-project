@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import 'reset.css';
 body {
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   display: block;
   position: relative;
@@ -43,7 +43,7 @@ body {
   border-radius: 2vw;
   position: relative;
 }
-p {
+.phrases p, .year p, .question p, .question2 p, .bookmark p {
   font-family: "Inter-Regular";
   font-weight: normal;
   font-size: 2.5vh;
@@ -70,12 +70,50 @@ span {color: #C4C4C4}
 .phrase2_center {padding-right: 3%; text-align: right;}
 .phrase3_center {padding-top: 2%; padding-right: 3%; padding-bottom: 3%; text-align: right;}
 .center_part1 h1, .message h1, .main_part4 h1 {
+  font-family: "Inter-Bold";
   /* float: right; */
   padding: 1vw 2.5vw 1.5vw 2.5vw;
   color: black;
+  font-size: 5vh;
   border-radius: 2vw;
   background-color: white;
   /* border: 2px solid black; */
+}
+.top_part3 h2 {
+  font-family: "Inter-Regular";
+  font-weight: normal;
+  font-size: 300px;
+}
+.top_part3 h1 {
+  font-size: 58px;
+  margin-right: 1vw;
+  display: inline-block;
+  font-family: "Inter-Bold";
+}
+.right2_part3_top h4 {
+    padding-top: 4vh;
+    padding: 1.5vh 5vh 1.5vh;
+    z-index: 2;
+    font-family: "Inter-Regular";
+    font-weight: normal;
+    font-size: 30px;
+    color: black;
+}
+.left_part3_top h4 {
+    font-family: "Inter-Regular";
+    font-weight: normal;
+    font-size: 30px;
+    padding: 1.5vh;
+    color: black;
+    padding: 1.5vh 2.5vh 1.5vh 14vh;
+}
+
+.left h1, .right h1 {
+    font-size: 53px;
+    padding: 2vw;
+    display: inline-block;
+    font-family: "Inter-Bold";
+    font-weight: normal;
 }
 .message h1, .main_part4 h1 {background-color: white;}
 .year {
@@ -133,7 +171,7 @@ span {color: #C4C4C4}
 .question, .question2, .letters, .message {padding: 1vh 3vh;}
 .message {text-align: right;}
 .part_1 {background: linear-gradient(180deg, #F4ECE1 0%, #E83A22 57.81%, #343434 100%); height: 100vh; width: 100vw;}
-.part_2 {background-image: url(img/19.svg); background-repeat: no-repeat; background-size: cover; height: 100vh; width: 100vw;}
+.part_2 {background-image: url(../images/19.svg); background-repeat: no-repeat; background-size: cover; height: 100vh; width: 100vw;}
 h1 {
   display: inline-block;
   font-family: "Inter-Bold";
@@ -152,9 +190,15 @@ h1 {
 .letters img {
   position: absolute;
   right: 2vw;
-  width: 15vw;
-  margin-top: 5vh;
+  width: 17vw;
+  margin-top: 6vh;
   opacity: 0;
+}
+.letter_a {
+  font-family: 'Inter-Regular';
+    font-size: 36vh;
+    /* margin: 1vh; */
+    padding: 2vh 6vh;
 }
 .A_vitamin {margin: 3vh 1vh 3vh 3vh;}
 .B_vitamin {margin: 3vh 3vh 3vh 1vh;}
@@ -335,7 +379,7 @@ button {
   width: 100vw;
   position: relative;
   overflow: hidden;
-  background-image: url(img/25.png);
+  background-image: url(../images/25.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
