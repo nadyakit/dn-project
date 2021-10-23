@@ -26,32 +26,35 @@ font-display: swap;
 }
 
 
-
-.header h1,.header_second_row h1 {
+.header {margin: 2vh;}
+.header h1, .header a, .header_second_row h1, .editing {
   font-family: 'Inter-Medium';
   font-size: 22px;
   display: inline-block;
 }
-.header h1 {
- padding-right: 4%;
- color: white;
+.header a {
+  text-decoration: none;
+  color: white !important;
+  padding-right: 4%;
 }
 .naming {
   float: right;
   padding-right: 0% !important;
   padding-left: 4%;
+  color: white;
 }
 .header_second_row {
-    margin-top: 4%;
+  margin: 4% 4% 0;
 }
-.header_second_row h1 {
+.header_second_row h1, .editing {
   padding: 1vw 3vw 1.1vw;
   color: black;
   background-color: white;
   border-radius: 2vw;
   margin: 0 !important;
 }
-.new_post {
+.editing {margin: 4% !important;}
+.new_post, .show_header_second_row a {
   font-family: "Inter-Medium";
   font-size: 22px;
   padding: 1vw 3vw 1.1vw;
@@ -59,8 +62,9 @@ font-display: swap;
   background-color: #8EA5EB;
   border-radius: 2vw;
   text-decoration: none;
-  float: right;
 }
+.new_post {float: right;}
+.show_header_second_row {margin: 4%;}
 .photo_block {
   height: 40vh;
   position: relative;
@@ -90,17 +94,18 @@ font-display: swap;
   margin: 5vh;
   // width: 30vw;
 }
-.post_name {
+.post_name, .show_name, .show_comments, .show_add_comment {
   font-family: "Inter-Regular";
   font-size: 15px;
-  padding: 0.5vw 1.5vw 0.6vw;
+  padding: 0.5vw 1vw 0.6vw;
   color: black;
   background-color: white;
   border-radius: 2vw;
   display: inline-block;
-  margin: 0.5vh 2vh;
 }
-.post_title {
+.post_name {margin: 0.5vh 2vh;}
+.show_name, .show_comments, .show_add_comment {margin: 0.5vh 0vh;}
+.post_title, .show_title {
   font-family: "Inter-Bold";
   font-size: 22px;
   padding: 0.5vw 1.5vw 0.6vw;
@@ -108,10 +113,16 @@ font-display: swap;
   background-color: white;
   border-radius: 2vw;
   display: block;
+}
+.post_title {
   margin: 0.5vh 2vh;
   max-width: 30vh;
 }
-.show_button, .edit_button, .destroy_button {
+.show_title {
+  margin: 0.5vh 0vh;
+  max-width: 30vh;
+}
+.show_button, .edit_button, .destroy_button, .show_edit_button, .actions {
   font-family: "Inter-Medium";
   font-size: 15px;
   padding: 0.5vw 1.5vw 0.6vw;
@@ -119,11 +130,91 @@ font-display: swap;
   background-color: #8EA5EB;
   border-radius: 2vw;
   text-decoration: none;
-  float: right;
-  margin: 0.5vh 0vh 2vh 2vh;
 }
-
+.show_button, .edit_button, .destroy_button {
+  margin: 0.5vh 0vh 2vh 2vh;
+  float: right;
+}
 
 .whole_form {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5vh;
+  width: 25vw;
+  border-radius: 2vw;
+  background-color: #F4ECE1;
+  padding: 2vw;
 }
+.whole_form label {
+  display: block;
+  font-family: "Inter-Bold";
+  font-size: 22px;
+  padding: 1.5vw 0vw 0.6vw;
+  color: black;
+}
+.image_form label {padding: 0vw 0vw 0.6vw !important;}
+.whole_form input {
+  background-color: white;
+  border-radius: 2vw;
+  border: none;
+  height: 4vh;
+  width: 100%;
+}
+.whole_show {
+  margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    width: 25vw;
+    border-radius: 2vw;
+    background-color: #F4ECE1;
+    padding: 2vw;
+}
+.whole_form img {
+  width: 100%;
+  border-radius: 2vh;
+}
+.show_content {
+  font-family: "Inter-Regular";
+  font-size: 19px;
+  display: inline-block;
+  margin: 2vh 0vh;
+}
+.show_image img {
+  width: 100%;
+  border-radius: 2vh;
+  margin-bottom: 2vh;
+}
+.show_edit_button {
+
+}
+.comment_author {
+  position: relative;
+  border-radius: 2vh;
+  background-color: white;
+}
+.comment_by_author {
+  font-family: "Inter-Regular";
+  font-size: 19px;
+  padding: 1vh 2vh 2vh;
+}
+.author_of_comment {
+  font-family: "Inter-Bold";
+  font-size: 19px;
+  padding: 1vh 2vh 2vh;
+}
+.destroy_comment {
+  text-decoration: none !important;
+  font-family: "Inter-Regular";
+  font-size: 14px;
+  position: absolute;
+  bottom: 1vh;
+  right: 1vh;
+}
+.show_comments {
+  margin: 2vh 0vh;
+}
+.show_add_comment {
+  margin: 4vh 0vh;
+}
+
+// .show_comments, .show_add_comment {display: table;}
