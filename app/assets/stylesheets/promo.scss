@@ -1,3 +1,350 @@
 // Place all the styles related to the Promo controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700;800;900&display=swap');
+@import "reset.css";
+@font-face {
+  font-family: "Inter";
+  src:url('<%= asset_path("Inter.ttf") %>') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+
+}
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+ position: absolute;
+ z-index: 10;
+ display: inline-flex;
+ justify-content: space-between;
+ width: 100%;
+ max-width: 1850px;
+ font-family: "Inter-Regular";
+ color: white;
+ margin: auto;
+
+}
+
+.menu {
+  display: block;
+  box-sizing: border-box;
+  margin-left: 40px;
+}
+
+.menu a, .logo a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 0 15px;
+  line-height: 90px;
+}
+
+.gradient {
+  display: inline-block;
+  background: linear-gradient(#291A15 2%, #7494D3 53%, #E2B8E6 100%);
+  height: 100vh;
+}
+
+.oval1 {
+  position: relative;
+  height: 68%;
+  width: 68%;
+  border-radius: 50%;
+  background: #FC4A27;
+  transform: rotate(37.78deg);
+  left: 76vh;
+  top: 16vh;
+}
+
+.oval2 {
+  position: relative;
+  border-radius: 50%;
+  background: #FC4A27;
+  transform: rotate(140deg);
+  top: -35.8vh;
+  height: 55.2%;
+  left: -9vh;
+  width: 52.8%;
+}
+
+.oval3 {
+  position: relative;
+  border-radius: 50%;
+  background: #FC4A27;
+  top: -58vh;
+  height: 35%;
+  left: 65.6vh;
+  width: 29%;
+}
+
+.text1 {
+  position: relative;
+  top: -138vh;
+  height: 40%;
+  width: 46%;
+  left: 20vh;
+}
+
+h1 {
+  color: black;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 44px;
+  font-family: "Inter-Regular";
+}
+
+.first_h1 {
+  position: relative;
+  width: 860px;
+  top: -165.5vh;
+  left: 22.5vh;
+  font-family: "Inter-Regular";
+}
+
+.text2 {
+  position: relative;
+  top: -167vh;
+  height: 50%;
+  width: 40%;
+  left: 45vh;
+}
+
+.first_h2 {
+  position: relative;
+  width: 800px;
+  top: -210vh;
+  font-family: "Inter-Regular";
+  left: 47vh;
+}
+.purple {
+  background-color: #E2B8E6;
+  position: relative;
+  height: 121vh;
+  width: 100vw;
+}
+.brown {
+  position: absolute;
+  top: 5.8vh;
+  width: 100vw;
+  bottom: 0;
+}
+.second_text {
+  position: relative;
+  top: 18vh;
+  border-radius: 25px;
+  max-width: 540px;
+  left: 20vh;
+  font-family: "Inter-Regular";
+
+  background-color: white;
+  filter: drop-shadow(7px 6px 50px rgba(0, 0, 0, 0.15));
+}
+.second_text p {
+  padding: 15px 15px;
+  font-size: 24px;
+  font-family: "Inter-Regular";
+
+  line-height: 29px;
+  font-weight: bold;
+}
+.blue {
+  background-color: #8EA5EB;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.fig {
+  text-align: center;
+  position: absolute;
+  width: 100vw;
+  margin-top: 4vh;
+
+}
+.blue_pic {
+  width: 80vw;
+}
+
+.text_blue1 {
+  left: 29vh;
+  z-index: 99;
+  top: 33.5vh;
+  font-family: "Inter-Regular";
+
+  position: absolute;
+}
+
+.text_blue1 img {
+  width: 14vw;
+}
+
+.blue p {
+  z-index: 999;
+  font-weight: bold;
+  font-size: 24px;
+  position: absolute;
+  line-height: 29px;
+  font-family: "Inter-Regular";
+
+  width: 250px;
+}
+
+.first{
+  left: 30vh;
+  top: 35vh;
+}
+
+.text_blue2 {
+  position: absolute;
+  z-index: 99;
+  font-family: "Inter-Regular";
+
+  left: 63.5vh;
+  top: 31vh;
+}
+
+.text_blue2 img {
+  width: 14vw;
+}
+
+.second {
+  left: 65vh;
+  top: 32.5vh;
+}
+
+.text_blue3 {
+  position: absolute;
+  z-index: 99;
+  font-family: "Inter-Regular";
+
+  left: 39.5vh;
+  top: 54.5vh;
+}
+
+.text_blue3 img {
+  width: 12vw;
+}
+
+.third {
+  left: 41vh;
+  top: 56.6vh;
+}
+
+.text_blue4 {
+  position: absolute;
+  z-index: 99;
+  left: 67vh;
+  top: 59vh;
+  font-family: "Inter-Regular";
+
+}
+
+.text_blue4 img {
+  width: 16vw;
+}
+
+.fourth {
+  left: 68.5vh;
+  top: 60.6vh;
+}
+
+.end {
+  background: linear-gradient(180deg, #000000 0%, #E83A22 51.04%, #E3D8AB 92.19%);
+  position: relative;
+  height: 100vh;
+}
+
+.gradient_last {
+ position: absolute;
+ width: 100vw;
+}
+
+.form {
+  display: flex;
+  font-family: "Inter-Regular";
+  z-index: 99;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  top: 65vh;
+}
+
+input[type="text"],
+select {
+  display: block;
+  width: 470px;
+  position: relative;
+  margin: 5px auto 10px;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: inherit;
+  color: white;
+  font-family: "Inter-Regular";
+
+
+}
+
+
+.send {
+  background: #8EA5EB;
+  border-radius: 35px;
+  color: white;
+  border: none;
+  height: 57px;
+  font-size: 24px;
+  font-weight: bold;
+  width: 15vw;
+  margin: 30px auto 50px;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+.form p {
+  text-align: center;
+  font-family: "Inter-Regular";
+
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.end_pic {
+  width: 88vh;
+  position: absolute;
+  left: 57vh;
+  top: 52vh;
+}
+
+.text_end {
+  position: absolute;
+  line-height: 44px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 99;
+  width: 785px;
+  font-family: "Inter-Regular";
+  left: 59vh;
+  top: 53.5vh;
+}

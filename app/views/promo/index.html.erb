@@ -1,6 +1,63 @@
-<h1>Promo#index</h1>
-<p>Find me in app/views/promo/index.html.erb</p>
-<%= link_to "About", about_path %>
 
-<h2>Узнать раньше всех о запуске проекта:</h2>
-<%= render "subscribers/form" %>
+<%# <%= link_to "About", about_path %> %>
+
+  <div class="container">
+    <div class="menu">
+      <a class="about" href="#">О нас</a>
+      <a class="promo" href="#">Промо</a>
+    </div>
+    <div class="logo">
+      <a href="#">бэйт</a>
+    </div>
+  </div>
+
+  <section class="gradient">
+    <div class="oval1"></div>
+    <div class="oval2"></div>
+    <div class="oval3"></div>
+      <%= image_tag "text1.svg", :class => "text1" %>
+    <h1 class="first_h1">Привет! Мы — «бэйт», поможем тебе понять, чем&nbsp;можно тебе заменить продукт, который&nbsp;ты не ешь</h1>
+      <%= image_tag "text2.svg", :class => "text2" %>
+    <h1 class="first_h2">С нами ты легко сможешь отказаться от&nbsp;витаминов в таблетках </h1>
+  </section>
+  <section class="purple">
+    <%= image_tag "brown.svg", :class => "brown" %>
+
+    <div class="second_text"> <p>Формально мы помогаем найти витаминную альтернативу продуктам животного происхождения в&nbsp;растительной пище. Однако это не&nbsp;совсем точно. На&nbsp;самом деле мы делаем веганскую и&nbsp;вегетарианскую рутину чуточку легче, а&nbsp;также немного оздоравливаем жизни.</p></div>
+  </section>
+  <section class="blue">
+      <%= image_tag "union1.svg", :class => "text_blue1" %>
+      <!-- <figure class="text_blue1">  <img src="img/union1.svg" alt=""> </figure> -->
+      <p class="first">1\ создайте аккаунт: так&nbsp;вы сможете сохранять статьи и&nbsp;откладывать их на&nbsp;потом</p>
+    <!-- <figure class="text_blue2"> <img src="img/union2.svg" alt=""> </figure> -->
+    <%= image_tag "union2.svg", :class => "text_blue2" %>
+    <p class="second">2\ в личном профиле выберите продукты, которые не хотите есть, чтобы лента подстроилась под&nbsp;вас</p>
+    <!-- <figure class="text_blue3"> <img src="img/union3.svg" alt=""> </figure> -->
+    <%= image_tag "union3.svg", :class => "text_blue3" %>
+    <p class="third">3\ во вкладке «‎Витамины» или&nbsp;«‎Подборки» выберите необходимый продукт</p>
+    <!-- <figure class="text_blue4"> <img src="img/union4.svg" alt=""> </figure> -->
+    <%= image_tag "union4.svg", :class => "text_blue4" %>
+
+    <p class="fourth">4\ читайте статьи, лайкайте&nbsp;и&nbsp;сохраняйте их&nbsp;к себе в&nbsp;личные подборки! </p>
+    <!-- <figure class="fig"><img class="blue_pic" src="img/blue_pic.svg" alt=""></figure> -->
+    <%= image_tag "blue_pic.svg", :class => "blue_pic" %>
+
+  </section>
+  <section class="end">
+    <%= image_tag "gradient_last.svg", :class => "gradient_last" %>
+    <%= image_tag "end_pic.svg", :class => "end_pic" %>
+
+    <!-- <img class="gradient_last" src="img/gradient_last.svg" alt="">
+    <img class="end_pic" src="img/end_pic.svg" alt=""> -->
+    <p class="text_end">Подписывайся на рассылку и будь в курсе событий!</p>
+    <section class="form">
+      <input class="name" type="text" name="" value="" placeholder="имя">
+      <input class="form_email" type="text" name="" value="" placeholder="Email">
+      <button class="send" type="button" name="button">Присоединиться!</button>
+      <p>2021</p>
+      <p>«бэйт»</p>
+    </section>
+  </section>
+
+<!-- <h2>Узнать раньше всех о запуске проекта:</h2> -->
+<%# <%= render "subscribers/form" %> %>
