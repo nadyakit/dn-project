@@ -1,7 +1,6 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
-	<div class="author_graph">
-		<%= f.label :commenter %><br />
-		<%= f.text_field :commenter %>
+	<div class="field">
+	   <%= current_user.email %>
 	</div>
 	<div class="comment_graph">
 		<%= f.label :body %><br />
