@@ -1,5 +1,8 @@
 class CommentsController < ApplicationController
 	# http_basic_authenticate_with :name => "admin", :password => "ndpassword", :only => :destroy
+	def index
+		@comments = Comment.all
+	end
 	def create
 		@post = Post.find(params[:post_id])
 		@comment = @post.comments.create(params[:comment].permit(:body).merge(user_id: current_user.id))
