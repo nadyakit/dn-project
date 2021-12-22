@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_21_124239) do
+ActiveRecord::Schema.define(version: 2021_12_22_120220) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_12_21_124239) do
     t.boolean "display_in_navbar", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "author"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -89,6 +90,8 @@ ActiveRecord::Schema.define(version: 2021_12_21_124239) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
     t.boolean "isadmin", default: false
+    t.string "name"
+    t.string "surname"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
