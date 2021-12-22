@@ -13,16 +13,53 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: 'Formular-Regular';
+  src: url('Formular-Regular.ttf') format('TrueType');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Formular-Medium';
+  src: url('Formular-Medium.ttf') format('TrueType');
+  font-weight: bolder;
+  font-style: normal;
+  font-display: swap;
+}
+
 .top_menu {
+  position: absolute;
+  bottom: 0;
+  /* position: fixed; */
+  width: 10%;
+  height: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  height: 60px;
-  margin-bottom: 40px;
-  background: #eee;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   border-bottom: 1px solid #ddd;
 }
 .top_menu a {
-  margin: 0 20px;
+  margin: 0 0 0 2vw;
+  font-family: Formular-Regular;
+  text-decoration: none;
+  display: block;
+  font-size: 1.2vw;
+  line-height: 2vw;
+}
+.top_menu a:hover {
+  color: black;
+  background-color: white;
+  font-family: Formular-Medium;
+}
+.top_menu img {
+  width: 4vw;
+  margin-left: 2vw;
+}
+.search {
+  margin-left: 15vw;
+  width: 50vw;
 }
