@@ -1,6 +1,7 @@
 Post.destroy_all
+# Category.destroy_all
 puts "Destroyed everything you touch"
-
+#
 # posts = [
 # {
 # 	image: File.open(Rails.root.join('public', 'images', 'pic-1.jpg')),
