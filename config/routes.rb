@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   resources :subscribers
+  resources :comments
 
   resources :posts do
       resources :comments
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
   get 'about/index'
   get 'promo/index'
   get 'posts/index'
+  get 'comments/index'
 
   get 'promo', to: 'promo#index'
   get 'about', to: 'about#index'
