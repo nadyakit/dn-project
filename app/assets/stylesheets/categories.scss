@@ -1,3 +1,78 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.table {
+  width: 80vw;
+  margin: 0 0 0 15vw;
+  font-family: Formular-Regular;
+  font-size: 1.2vw;
+}
+.thead {
+}
+.tr_top {
+  height: 4vw;
+  border-radius: 1vw;
+  background-color: #F4ECE1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "point1 point2 point3 point4"
+}
+.tr_bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "point1 point2 point3 point4";
+  width: 98%;
+  margin: 0 auto;
+}
+.new_smth {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  display: flex;
+  align-items: center;
+  height: 4vw;
+  background-color: #E8FF4C;
+  border-radius: 2vw;
+}
+.new_smth a {
+  font-family: Formular-Regular;
+  text-decoration: none;
+  margin: 0 1vw 0.3vw 0;;
+  width: 6vw;
+  text-align: center;
+  font-size: 1.2vw;
+  color: black;
+}
+.new_smth img {
+  height: 2.5vw;
+  margin-left: 1vw;
+}
+.tr_top td {
+  margin: auto 0;
+  font-family: Formular-Medium;
+}
+.tr_bottom td {
+  height: 3vw;
+  border-bottom: 2px solid #8EA5EB;
+  margin-top: 1vw;
+}
+.edit_destroy a {
+  font-family: Formular-Regular;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.2vw;
+  color: black;
+}
+.sort {
+  display: flex;
+  justify-content: flex-start;
+  margin: 8vw 0 1vw 15vw;
+  font-family: Formular-Regular;
+  font-size: 1vw;
+  color: #D3D3D3;
+}
+.sort a {
+  text-decoration: none;
+  margin-left: 2vw;
+  color: #D3D3D3;
+}
