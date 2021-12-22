@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name, "Название" %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.select :category_id, Category.pluck(:description, :id) %>
   </div>
 
-  <div class="field">
-    <%= form.label :display_in_navbar %>
-    <%= form.check_box :display_in_navbar %>
+    <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
   </div>
 
   <div class="actions">
