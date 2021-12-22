@@ -19,15 +19,27 @@
     <% end %>
 
     <div class="top_menu">
-    <% Category.where(display_in_navbar: true).each do |cat| %>
-      <%= link_to cat.name, posts_path(category: cat.name) %> |
-    <% end %>|
-
+    <img src="" alt="">
+    <div>
+      <%= image_tag "logo.svg"%>
+      <%= link_to 'Статьи', posts_path %>
+      <%= link_to 'Подборки', categories_path %>
+      <a href="#">Комментарии</a>
+      <%= link_to 'Пользователи', users_path %>
+      <a href="#">Обращения</a>
+    </div>
     <% if user_signed_in? %>
-      <%= link_to 'Account', current_user %> | <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+      <%= link_to 'Account', current_user %>
+      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
     <% else %>
-      <%= link_to 'Sign In', new_user_session_path %> | <%= link_to 'Sign Up', new_user_registration_path %>
+      <%= link_to 'Sign In', new_user_session_path %>
+      <%= link_to 'Sign Up', new_user_registration_path %>
     <% end %>
+    </div>
+
+    <div class="search">
+      <input type="text" name="Поиск" value="">
+      <%= image_tag "search.svg"%>
     </div>
 
     <%= yield %>
