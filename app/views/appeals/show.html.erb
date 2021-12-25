@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @appeal.author %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @appeal.email %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @appeal.content %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @appeal.data %>
+</p>
+
+<%= link_to 'Edit', edit_appeal_path(@appeal) %> |
+<%= link_to 'Back', appeals_path %>
