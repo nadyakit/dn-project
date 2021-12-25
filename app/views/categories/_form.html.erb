@@ -11,22 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+<div class="whole_form">
+  <div class="name_form">
     <%= form.label :name, "Название" %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.select :category_id, Category.pluck(:description, :id) %>
+    <%= form.label :section_id, "Раздел" %>
+    <%= form.select :section_id, Section.pluck(:name, :id) %>
   </div>
 
-    <div class="field">
-    <%= form.label :author %>
-    <%= form.text_field :author %>
+  <div class="field">
+    <%= form.label :description, "Описание" %>
+    <%= form.cktext_area :description %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+</div>
 <% end %>
