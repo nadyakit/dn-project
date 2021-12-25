@@ -1,3 +1,11 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.tr_top_comments {
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-areas: "point1 point2 point3 point4 point5"
+}
+.tr_bottom_comments {
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-areas: "point1 point2 point3 point4 point5";
+}
