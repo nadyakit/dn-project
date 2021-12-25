@@ -1,24 +1,38 @@
-<table>
-  <thead>
-    <tr>
-      <th>Имя</th>
-      <th>Фамилия</th>
-      <th>Никнейм</th>
-      <th>Логин</th>
-      <th>Пароль</th>
-      <th>Действие</th>
+<div class="search">
+  <input type="text" name="Поиск" value="Поиск">
+  <%= image_tag "search.svg"%>
+</div>
+
+<div class="sort">
+  <p>Сортировать по:</p>
+  <a href="#">Имени</a>
+  <a href="#">Никнейму</a>
+  <a href="#">Логину</a>
+</div>
+
+<table class="table">
+  <thead class="thead">
+    <tr class="tr_top tr_top_users">
+      <td style="grid-area: point1;">Имя</td>
+      <td style="grid-area: point2">Фамилия</td>
+      <td style="grid-area: point3">Никнейм</td>
+      <td style="grid-area: point4">Логин</td>
+      <td  style="grid-area: point5">Действие</td>
     </tr>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.surname %></td>
-        <td><%= user.username %></td>
-        <td><%= link_to user.email, user %></td>
-        <td><%= user.encrypted_password %></td>
-        <td></td>
+      <tr class="tr_bottom tr_bottom_users">
+        <td style="grid-area: point1"><%= user.name %></td>
+        <td style="grid-area: point2"><%= user.surname %></td>
+        <td style="grid-area: point3"><%= user.username %></td>
+        <td style="grid-area: point4"><%= link_to user.email, user %></td>
+        <td class="edit_destroy" style="grid-area: point5">
+          <% if user_signed_in? && current_user.isadmin == true %>
+            <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"destroy_button" %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
