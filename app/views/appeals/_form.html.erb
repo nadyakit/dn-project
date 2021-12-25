@@ -1,0 +1,37 @@
+<%= form_with(model: appeal) do |form| %>
+  <% if appeal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appeal.errors.count, "error") %> prohibited this appeal from being saved:</h2>
+
+      <ul>
+        <% appeal.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.datetime_select :data %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
