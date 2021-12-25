@@ -1,16 +1,41 @@
-<% @posts.each do |post| %>
-      <tr>
-        <td><%= post.name%></td>
-        <td><%= post.title%></td>
-        <td><%= post.category.name %></td>
-        <td><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></td>
-        <td><%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></td>
+<p id="notice"><%= notice %></p>
 
-        <%= link_to 'Show', post, :class =>"show_button" %>
+<div class="search">
+  <input type="text" name="Поиск" value="Поиск">
+  <%= image_tag "search.svg"%>
+</div>
 
-        <% if user_signed_in? && current_user.isadmin == true %>
-          <%= link_to 'Edit', edit_post_path(post), :class =>"edit_button" %>
-          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"destroy_button" %>
-        <% end %>
-      </tr>
-<% end %>
+<div class="sort">
+  <p>Сортировать по:</p>
+  <a href="#">Никнейму</a>
+  <a href="#">Дате</a>
+</div>
+
+<table class="table">
+  <thead class="thead">
+    <tr class="tr_top tr_top_comments">
+      <td style="grid-area: point1">Автор</td>
+      <td style="grid-area: point2">Пост</td>
+      <td style="grid-area: point3">Содержание</td>
+      <td style="grid-area: point4">Дата/время</td>
+      <td style="grid-area: point5">Действие</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+          <tr class="tr_bottom tr_bottom_comments">
+            <td style="grid-area: point1"><%= User.find(comment.user_id).username %></td>
+            <td style="grid-area: point2"><%= Post.find(comment.post_id).name %></td>
+            <td style="grid-area: point3"><%= comment.body%></td>
+            <td style="grid-area: point4"><%= comment.created_at.strftime("%d %m %y")%></td>
+            <td class="edit_destroy" style="grid-area: point5">
+              <% if user_signed_in? && current_user.isadmin == true %>
+                <%= link_to 'Edit', edit_comment_path(comment), :class =>"edit_button" %>
+                <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"destroy_button" %>
+              <% end %>
+            </td>
+          </tr>
+    <% end %>
+  </tbody>
+</table>
