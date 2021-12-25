@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<div class="search">
+  <input type="text" name="Поиск" value="Поиск">
+  <%= image_tag "search.svg"%>
+</div>
+
 <div class="sort">
   <p>Сортировать по:</p>
   <a href="#">Названию</a>
@@ -9,8 +14,8 @@
 
 <table class="table">
   <thead class="thead">
-    <tr class="tr_top">
-      <td style="grid-area: point1; padding-left: 2vw;">Название</td>
+    <tr class="tr_top tr_top_categories">
+      <td style="grid-area: point1;">Название</td>
       <td style="grid-area: point2">Раздел</td>
       <td style="grid-area: point3">Автор</td>
       <td style="grid-area: point4">Действие</td>
@@ -19,10 +24,9 @@
 
   <tbody>
     <% @categories.each do |category| %>
-      <tr class="tr_bottom">
-        <td style="grid-area: point1"><%= category.name %></td>
-        <td style="grid-area: point2"><%= category.description %></td>
-        <td style="grid-area: point3"><%= category.author %></td>
+      <tr class="tr_bottom tr_bottom_categories">
+        <td style="grid-area: point1"><%= category.name%></td>
+        <td style="grid-area: point3"><%= category.author%></td>
 
         <td class="edit_destroy" style="grid-area: point4">
           <% if user_signed_in? && current_user.isadmin == true %>
