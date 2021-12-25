@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :sections
+  resources :appeals
   resources :categories
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
@@ -19,6 +21,7 @@ Rails.application.routes.draw do
   get 'promo/index'
   get 'posts/index'
   get 'comments/index'
+  get 'appeals/index'
 
   get 'promo', to: 'promo#index'
   get 'about', to: 'about#index'
