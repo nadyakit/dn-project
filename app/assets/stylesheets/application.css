@@ -31,19 +31,22 @@
 }
 
 .top_menu {
-  position: absolute;
-  bottom: 0;
-  /* position: fixed; */
-  width: 10%;
+  /* position: absolute; */
+  top: 0;
+  position: fixed;
+  width: 11%;
   height: 100%;
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-areas: "logo_topmenu"
+                       "menu_topmenu"
+                       "bottom_topmenu";
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   border-bottom: 1px solid #ddd;
 }
 .top_menu a {
-  margin: 0 0 0 2vw;
+  margin: 0 0 0 1vw;
   font-family: Formular-Regular;
   text-decoration: none;
   display: block;
@@ -55,11 +58,69 @@
   background-color: white;
   font-family: Formular-Medium;
 }
-.top_menu img {
-  width: 4vw;
-  margin-left: 2vw;
-}
 .search {
   margin-left: 15vw;
-  width: 50vw;
+  width: 32vw;
+  margin-top: 1vw;
+  border-bottom: 2px solid #D3D3D3;
+  display: flex;
+  align-items: center;
+}
+.search input {
+  border: 0;
+  height: 2vw;
+  width: 32vw;
+  font-family: 'Formular-Regular';
+  font-size: 1vw;
+  color: #D3D3D3;
+}
+.logo_topmenu {
+  grid-area: logo_topmenu;
+  width: 4vw;
+  margin: 1vw 0 0 1vw;
+}
+.menu_topmenu {
+  grid-area: menu_topmenu;
+  margin: auto 0;
+}
+.bottom_topmenu {
+  grid-area: bottom_topmenu;
+}
+.registration, .autorization {
+  width: 30vw;
+  background-color: #8EA5EB;
+  border-radius: 1vw;
+  font-family: 'Formular-Regular';
+  font-size: 1.2vw;
+}
+.name_registration, .surname_registration, .password {
+  display: inline-block;
+  width: 42.7%;
+}
+.registration label, .autorization label {
+  color: #F4ECE1;
+}
+.registration div, .autorization div {
+  padding: 1vw 1vw 1vw 1vw;
+}
+.sign_up_button, .sign_in_button {
+  margin: 2vw auto;
+}
+.sign_up_button input, .sign_in_button input {
+  background-color: #E8FF4C;
+  font-family: 'Formular-Regular';
+  font-size: 1.2vw;
+  border: none;
+  padding: 1vw 2vw;
+  border-radius: 4vw;
+}
+.registration_with_button, .autorization_with_button {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin: 7vw auto 0;
+}
+.autorization_with_button {
+  margin: 7vw auto 0;
+  
 }
