@@ -1,32 +1,52 @@
 <p id="notice"><%= notice %></p>
 
-<table class="main_page_table">
-  <thead>
-    <tr>
-			<th>Название</th>
-      <th>Раздел</th>
-      <th>Подборки</th>
-      <th>Автор</th>
-      <th>Дата</th>
-			<th>Действие</th>
+<div class="search">
+  <input type="text" name="Поиск" value="Поиск">
+  <%= image_tag "search.svg"%>
+</div>
+
+<div class="post_status">
+  <a href="#">Опубликованные</a>
+  <a href="#">Черновики</a>
+</div>
+
+<div class="sort">
+  <p>Сортировать по:</p>
+  <a href="#">Названию</a>
+  <a href="#">Дате</a>
+  <a href="#">Разделу</a>
+  <a href="#">Подборке</a>
+  <a href="#">Автору</a>
+</div>
+
+<table class="table">
+  <thead class="thead">
+    <tr class="tr_top tr_top_posts">
+			<td style="grid-area: point1;">Название</td>
+      <td style="grid-area: point2">Раздел</td>
+      <td style="grid-area: point3">Подборки</td>
+      <td style="grid-area: point4">Автор</td>
+      <td style="grid-area: point5">Дата</td>
+			<td style="grid-area: point6">Действие</td>
     </tr>
   </thead>
 
-  <tbody class="posts">
+  <tbody>
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.name%></td>
-        <td><%= post.title%></td>
-        <td><%= post.category.name %></td>
-        <td><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></td>
-        <td><%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></td>
+      <tr class="tr_bottom tr_bottom_posts">
+        <td style="grid-area: point1"><%= post.name%></td>
+        <td style="grid-area: point2"><%= post.section.name%></td>
+        <td style="grid-area: point3"><%= post.category.name%></td>
+        <td style="grid-area: point4"><%= post.author%></td>
+        <td style="grid-area: point5"><%= time_ago_in_words(post.created_at)%></td>
 
-        <%= link_to 'Show', post, :class =>"show_button" %>
-
-        <% if user_signed_in? && current_user.isadmin == true %>
-          <%= link_to 'Edit', edit_post_path(post), :class =>"edit_button" %>
-          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"destroy_button" %>
-        <% end %>
+        <td style="grid-area: point6" class="show_edit_destroy">
+          <%= link_to 'Show', post, :class =>"show_button" %>
+          <% if user_signed_in? && current_user.isadmin == true %>
+            <%= link_to 'Edit', edit_post_path(post), :class =>"edit_button" %>
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"destroy_button" %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -34,5 +54,5 @@
 
 <div class="new_smth">
   <%= image_tag "plus_sign.svg"%>
-  <%= link_to 'Создать пост', new_category_path %>
+  <%= link_to 'Создать пост', new_post_path %>
 </div>
