@@ -1,10 +1,10 @@
-<div class="header">
-  <%= link_to 'О нас', about_path %>
-  <%= link_to 'Промо', promo_path %>
-  <%= link_to 'Блог', posts_path %>
-  <h1 class="naming">B8</h1>
+<div class="header_second_row">
+  <td><%= link_to image_tag('arrow_back.svg'), posts_path %></td>
+  <%= link_to 'Назад', posts_path%>
 </div>
 
-<h1 class="editing">Редактирование поста</h1>
+<div class="header">
+  <h1>Редактирование статьи</h1>
+</div>
 
 <%= render 'form', post: @post %>
