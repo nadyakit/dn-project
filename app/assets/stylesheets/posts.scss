@@ -1,7 +1,7 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-//
+
 // @font-face {
 // font-family: 'Inter-Regular';
 // src: url('Inter-Regular.ttf') format('TrueType');
@@ -137,51 +137,51 @@
 //   float: right;
 // }
 //
-// .whole_form {
-//   margin-left: auto;
-//   margin-right: auto;
-//   margin-bottom: 5vh;
-//   width: 25vw;
-//   border-radius: 2vw;
-//   background-color: #F4ECE1;
-//   padding: 2vw;
-// }
-// .whole_form label {
-//   display: block;
-//   font-family: "Inter-Bold";
-//   font-size: 22px;
-//   padding: 1.5vw 0vw 0.6vw;
-//   color: black;
-// }
-// .image_form label {padding: 0vw 0vw 0.6vw !important;}
-// .whole_form input[type="text"] {
-//   background-color: white;
-//   border-radius: 2vw;
-//   border: none;
-//   height: 4vh;
-//   width: 95%;
-//   margin: 5px auto 10px;
-//     padding: 0 10px;
-//     font-size: 18px;
-//     border: none;
-//     font-family: "Inter-Regular";
-//     color: black;
-// }
+// // .whole_form {
+// //   margin-left: auto;
+// //   margin-right: auto;
+// //   margin-bottom: 5vh;
+// //   width: 25vw;
+// //   border-radius: 2vw;
+// //   background-color: #F4ECE1;
+// //   padding: 2vw;
+// // }
+// // .whole_form label {
+// //   display: block;
+// //   font-family: "Inter-Bold";
+// //   font-size: 22px;
+// //   padding: 1.5vw 0vw 0.6vw;
+// //   color: black;
+// // }
+// // .image_form label {padding: 0vw 0vw 0.6vw !important;}
+// // .whole_form input[type="text"] {
+// //   background-color: white;
+// //   border-radius: 2vw;
+// //   border: none;
+// //   height: 4vh;
+// //   width: 95%;
+// //   margin: 5px auto 10px;
+// //     padding: 0 10px;
+// //     font-size: 18px;
+// //     border: none;
+// //     font-family: "Inter-Regular";
+// //     color: black;
+// // }
 //
-// .whole_show {
-//     margin-left: auto;
-//     margin-right: auto;
-//     margin-bottom: 5vh;
-//     width: 25vw;
-//     border-radius: 2vw;
-//     background-color: #F4ECE1;
-//     padding: 2vw;
-//     position: relative;
-// }
-// .whole_form img {
-//   width: 100%;
-//   border-radius: 2vh;
-// }
+// // .whole_show {
+// //     margin-left: auto;
+// //     margin-right: auto;
+// //     margin-bottom: 5vh;
+// //     width: 25vw;
+// //     border-radius: 2vw;
+// //     background-color: #F4ECE1;
+// //     padding: 2vw;
+// //     position: relative;
+// // }
+// // .whole_form img {
+// //   width: 100%;
+// //   border-radius: 2vh;
+// // }
 // .show_content {
 //   font-family: "Inter-Regular";
 //   font-size: 19px;
@@ -250,30 +250,144 @@
 //   border-radius: 2vh;
 //   margin-bottom: 3vh;
 // }
-
-
-
+//
+//
+//
 // .show_comments, .show_add_comment {display: table;}
-.new_smth {
-  position: absolute;
-  top: 1vw;
-  right: 1vw;
-  display: flex;
-  align-items: center;
-  height: 4vw;
-  background-color: #E8FF4C;
-  border-radius: 2vw;
+
+.tr_top_posts {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "point1 point2 point3 point4 point5 point6"
 }
-.new_smth a {
+.tr_bottom_posts {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "point1 point2 point3 point4 point5 point6";
+}
+.show_edit_destroy a {
   font-family: Formular-Regular;
   text-decoration: none;
-  margin: 0 1vw 0.3vw 0;;
-  width: 6vw;
   text-align: center;
   font-size: 1.2vw;
   color: black;
 }
-.new_smth img {
-  height: 2.5vw;
-  margin-left: 1vw;
+.post_status {
+  position: absolute;
+  left: 15vw;
+  top: 5vw;
+}
+.post_status a {
+  text-decoration: none;
+  font-family: 'Formular-Regular';
+  /* height: 2vw; */
+  background-color: #F4ECE1;
+  padding: 0.5vw 1vw;
+  border-radius: 2vw;
+  font-size: 1vw;
+  color: black;
+}
+.post_status a:not(:first-child) {
+  margin-left: 0.5vw;
+}
+.whole_form {
+  margin: 4vw 0 4vw 25vw;
+  width: 30vw;
+  border: 1px solid black;
+  border-radius: 1vw;
+  font-family: 'Formular-Medium';
+  font-size: 1.5vw;
+}
+.header h1 {
+  font-family: 'Formular-Medium';
+  font-size: 2.5vw;
+  max-width: 30vw;
+}
+.header {
+  margin-left: 25vw;
+  display: inline-block;
+  margin-top: 1vw;
+}
+.header_second_row {
+  position: absolute;
+  left: 17vw;
+  top: 1.5vw;
+  display: flex;
+  align-items: center;
+}
+.header_second_row a {
+  font-family: 'Formular-Regular';
+  text-decoration: none;
+  color: #D3D3D3;
+  font-size: 1vw;
+}
+.header_second_row :nth-child(2) {
+  padding: 0 0 0.1vw 0.4vw;
+}
+.whole_form div {
+  margin: 2vw 1vw;
+}
+.name_form input {
+  border: none;
+  background-color: #F0F0F0;
+  border-radius: 0.6vw;
+  height: 2vw;
+  margin-top: 0.8vw;
+  width: 96%;
+  padding: 0 0 0 0.5vw;
+  font-family: 'Formular-Regular';
+  font-size: 1vw;
+}
+.field select {
+  border: none;
+  background-color: #F0F0F0;
+  border-radius: 1vw;
+  height: 3vw;
+  margin-top: 0.8vw;
+  width: 30%;
+  padding: 0 0 0 0.5vw;
+  font-family: 'Formular-Regular';
+  font-size: 1vw;
+}
+#cke_post_content {
+  margin: 0.8vw 0 0 0;
+}
+
+
+///show поста
+.whole_show {
+  margin: 2vw 0 4vw 25vw;
+  width: 35vw;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 1vw;
+}
+.show_image {
+}
+.show_image img {
+  width: 93%;
+  margin: 1vw;
+  border-radius: 0.5vw;
+}
+.whole_show strong {
+  font-family: 'Formular-Medium';
+  font-size: 1.5vw;
+  margin: 2vw 1vw;
+}
+.whole_show p {
+  font-family: 'Formular-Regular';
+  font-size: 1.2vw;
+  margin: 0.5vw 0 1vw 1vw;
+  display: inline-block;
+  max-width: 87%;
+  background-color: #F0F0F0;
+  padding: 1vw;
+  border-radius: 1vw;
+}
+.show_add_comment {
+  font-family: 'Formular-Medium';
+  font-size: 1vw;
+  margin: 1vw 1vw;
+}
+.new_comment {
+  font-family: 'Formular-Regular';
+  font-size: 1vw;
 }
