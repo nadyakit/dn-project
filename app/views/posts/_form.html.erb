@@ -12,28 +12,28 @@
   <% end %>
 
 <div class="whole_form">
-  <div class="image_form">
-  	<%= form.label :image %>
-  	<%= form.file_field :image %>
-  </div>
-
   <div class="name_form">
-    <%= form.label :name %>
+    <%= form.label :name, "Название" %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :category_id %>
+    <%= form.label :section_id, "Раздел" %>
+    <%= form.select :section_id, Section.pluck(:name, :id) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id, "Подборка" %>
     <%= form.select :category_id, Category.pluck(:name, :id) %>
   </div>
 
-  <div class="title_form">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="image_form">
+    <%= form.label :image, "Фотография" %>
+    <%= form.file_field :image %>
   </div>
 
   <div class="content_form">
-    <%= form.label :content %>
+    <%= form.label :content, "Текст" %>
     <%= form.cktext_area :content %>
   </div>
 
