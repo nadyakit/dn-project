@@ -1,0 +1,38 @@
+// Place all the styles related to the Appeals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.tr_top_appeals {
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-areas: "point1 point2 point3 point4 point5"
+}
+.tr_bottom_appeals {
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-areas: "point1 point2 point3 point4 point5";
+}
+.appeal_status {
+  position: absolute;
+  left: 15vw;
+  top: 5vw;
+}
+.appeal_status a {
+  text-decoration: none;
+  font-family: 'Formular-Regular';
+  /* height: 2vw; */
+  background-color: #F4ECE1;
+  padding: 0.5vw 1vw;
+  border-radius: 2vw;
+  font-size: 1vw;
+  color: black;
+}
+.appeal_status a:not(:first-child) {
+  margin-left: 0.5vw;
+}
+.appeal_content {
+  background-color: #F0F0F0;
+  padding: 1vw !important;
+  border-radius: 1vw;
+  margin: 1vw 1vw 1vw 0;
+}
+.appeal_element {
+  padding: 2vw 0vw !important;
+}
