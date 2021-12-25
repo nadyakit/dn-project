@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_22_120220) do
+ActiveRecord::Schema.define(version: 2021_12_23_051443) do
+
+  create_table "appeals", force: :cascade do |t|
+    t.string "author"
+    t.string "email"
+    t.text "content"
+    t.datetime "data"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -19,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_12_22_120220) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "author"
+    t.index ["section_id"], name: "index_posts_on_section_id"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -70,8 +80,16 @@ ActiveRecord::Schema.define(version: 2021_12_22_120220) do
     t.string "image"
     t.integer "user_id", null: false
     t.integer "category_id", null: false
+    t.integer "section_id", null: false
     t.index ["category_id"], name: "index_posts_on_category_id"
+    t.index ["section_id"], name: "index_posts_on_section_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "subscribers", force: :cascade do |t|
@@ -103,5 +121,6 @@ ActiveRecord::Schema.define(version: 2021_12_22_120220) do
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "users"
   add_foreign_key "posts", "categories"
+  add_foreign_key "posts", "sections"
   add_foreign_key "posts", "users"
 end
