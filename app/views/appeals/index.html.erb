@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<div class="search">
+  <input type="text" name="Поиск" value="Поиск">
+  <%= image_tag "search.svg"%>
+</div>
+
+<div class="appeal_status">
+  <a href="#">Все</a>
+  <a href="#">Открытые</a>
+  <a href="#">Закрытые</a>
+  <a href="#">Неликвидные</a>
+</div>
+
+<div class="sort">
+  <p>Сортировать по:</p>
+  <a href="#">Имени</a>
+  <a href="#">Почте</a>
+  <a href="#">Дате</a>
+</div>
+
+<table class="table">
+  <thead class="thead">
+    <tr class="tr_top tr_top_appeals">
+      <td style="grid-area: point1;">Отправитель</td>
+      <td style="grid-area: point2;">Почта</td>
+      <td style="grid-area: point3;">Содержание</td>
+      <td style="grid-area: point4;">Дата</td>
+      <td style="grid-area: point5;">Действие</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appeals.each do |appeal| %>
+      <tr class="tr_bottom tr_bottom_appeals">
+        <td class="appeal_element" style="grid-area: point1;"><%= appeal.author %></td>
+        <td class="appeal_element" style="grid-area: point2;"><%= appeal.email %></td>
+        <td class="appeal_content" style="grid-area: point3;"><%= appeal.content %></td>
+        <td class="appeal_element" style="grid-area: point4;"><%= time_ago_in_words(appeal.created_at)%></td>
+
+        <td class="appeal_element" style="grid-area: point5;" class="show_edit_destroy">
+          <%= link_to 'Show', appeal %>
+          <%= link_to 'Edit', edit_appeal_path(appeal) %>
+          <%= link_to 'Destroy', appeal, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<!-- <div class="new_smth">
+  <%= image_tag "plus_sign.svg"%>
+  <%= link_to 'Создать пост', new_appeal_path %>
+</div> -->
