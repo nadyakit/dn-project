@@ -1,19 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+<div class="header_second_row">
+  <td><%= link_to image_tag('arrow_back.svg'), category_path%></td>
+  <%= link_to 'Назад', category_path%>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @category.description %>
-</p>
+<div class="header">
+  <h1><%= @category.name%></h1>
+</div>
 
-<p>
-  <strong>Display in navbar:</strong>
-  <%= @category.display_in_navbar %>
-</p>
+<div class="whole_show">
+        <strong>Раздел</strong><br>
+        <p><%= @category.section.name%></p><br>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+        <strong>Описание</strong><br>
+        <%= @category.description%><br>
+</div>
