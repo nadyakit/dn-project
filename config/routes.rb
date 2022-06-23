@@ -13,17 +13,17 @@ Rails.application.routes.draw do
       resources :favorites
   end
 
-  root 'about#index'
+  root 'posts#index'
 
   get 'users', to: 'users#index'
   get 'users/:id' => 'users#show', :as => :user
   delete 'users/:id', to: 'users#destroy'
 
   get 'about/index', to: 'about#index'
-  get 'promo/index'
-  get 'posts/index'
-  get 'comments/index'
-  get 'appeals/index'
+  get 'promo/index', to: 'promo#index'
+  get 'posts/index', to: 'posts#index'
+  get 'comments/index', to: 'comments#index'
+  get 'appeals/index', to: 'appeals#index'
 
   get 'promo', to: 'promo#index'
   get 'about', to: 'about#index'
