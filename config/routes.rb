@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 
   root 'about#index'
 
-
   get 'users', to: 'users#index'
   get 'users/:id' => 'users#show', :as => :user
   delete 'users/:id', to: 'users#destroy'
