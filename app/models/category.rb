@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  has_many :section
+  # has_many :section, dependent: :destroy
 end

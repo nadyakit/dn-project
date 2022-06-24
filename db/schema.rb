@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 2021_12_23_051443) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "author"
-    t.index ["section_id"], name: "index_posts_on_section_id"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
