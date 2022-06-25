@@ -96,4 +96,3 @@ end
 # 	Appeal.create!(appeal)
 # 	# puts "Some magic just create a #{ appealik.author } with id #{ appealik.id }!"
 # end
-
