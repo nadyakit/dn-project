@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Header = () => {
   return <div>
-    <input
+    <input placeholder="Хочу найти..." className="firsttry" />
   </div>;
 };
 

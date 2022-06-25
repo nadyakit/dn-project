@@ -1,5 +1,31 @@
 <p id="notice"><%= notice %></p>
 
+<% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+
+    <div class="top_menu">
+      <%= image_tag "logo.svg", :class =>"logo_topmenu"%>
+    <div class="menu_topmenu">
+      <%= link_to 'Статьи', posts_path %>
+      <%= link_to 'Подборки', categories_path %>
+      <%= link_to 'Комментарии', comments_path %>
+      <%= link_to 'Пользователи', users_path %>
+      <%= link_to 'Обращения', appeals_path %>
+    </div>
+    <div class="bottom_topmenu">
+      <% if user_signed_in? %>
+        <%= link_to 'Аккаунт', current_user %>
+        <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Авторизация', new_user_session_path %>
+        <%= link_to 'Регистрация', new_user_registration_path %>
+      <% end %>
+    </div>
+    </div>
+
 <div class="search">
   <input type="text" name="Поиск" value="Поиск">
   <%= image_tag "search.svg"%>
