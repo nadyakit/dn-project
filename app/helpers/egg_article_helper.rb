@@ -1,0 +1,2 @@
+module EggArticleHelper
+end

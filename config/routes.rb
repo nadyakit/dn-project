@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get 'posts/index', to: 'posts#index'
   get 'comments/index', to: 'comments#index'
   get 'appeals/index', to: 'appeals#index'
+  get 'egg_article/index', to: 'egg_article#index'
 
   get 'promo', to: 'promo#index'
   get 'about', to: 'about#index'

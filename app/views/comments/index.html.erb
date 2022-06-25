@@ -32,7 +32,7 @@
             <td class="edit_destroy" style="grid-area: point5">
               <% if user_signed_in? && current_user.isadmin == true %>
                 <%= link_to 'Edit', edit_comment_path(comment), :class =>"edit_button" %>
-                <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"destroy_button" %>
+                <%= link_to 'Destroy', comment, method: :destroy, data: { confirm: 'Are you sure?' }, :class =>"destroy_button" %>
               <% end %>
             </td>
           </tr>
