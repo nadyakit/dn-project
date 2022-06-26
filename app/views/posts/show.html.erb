@@ -1,26 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<div class="header_second_row">
-  <td><%= link_to image_tag('arrow_back.svg'), posts_path %></td>
-  <%= link_to 'Назад', posts_path%>
+<div class="header_article">
+  <div class="search_and_bttn"> 
+    <input type="text" name="Поиск" placeholder="Хочу найти…">
+    <div class="user_acc">
+      <% if user_signed_in? %>
+        <%= link_to image_tag('AccountMobile.svg'), current_user %>
+      <% else %>
+        <%= link_to image_tag('SignInMobile.svg'), new_user_registration_path %>
+      <% end %>
+    </div> 
+  </div>
+  <div class="mobile_menu">
+    <a href="" class="main">Главная</a>
+    <a href="">Продукты</a>
+    <a href="">Витамины</a>
+  </div>
 </div>
-
-<div class="header">
-  <h1><%= @post.name%></h1>
-</div>
-
 <div class="whole_show">
+  <div class="PostNameAndF">
+    <h1><%= @post.name%></h1>
+      <% if user_signed_in? %>
+        <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
+        <% if pre_favorite %>
+            <%= link_to image_tag('fIconNone.svg'), post_favorite_path(@post, pre_favorite), method: :delete %>
+        <% else %>
+            <%= link_to image_tag('fIconActive.svg'), post_favorites_path(@post), method: :post %>
+        <% end %>
+      <% end %>
+  </div>
       <div class="show_image">
       	<%= image_tag(@post.image.url, alt: '') if @post.image?%>
       </div>
 
-        <strong>Раздел</strong><br>
-        <p><%= @post.section.name%></p><br>
-
-        <strong>Подборка</strong><br>
-        <p><%= @post.category.name%></p><br>
-
-        <strong>Содержание</strong><br>
         <%= @post.content.html_safe %><br>
 
         <p><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
@@ -34,12 +46,7 @@
             <%= button_to 'Like', post_likes_path(@post), method: :post %>
           <% end %>
 
-          <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
-          <% if pre_favorite %>
-              <%= button_to 'Remove from Favorite', post_favorite_path(@post, pre_favorite), method: :delete %>
-          <% else %>
-              <%= button_to 'Add to Favorite', post_favorites_path(@post), method: :post %>
-          <% end %>
+          
         <% end %>
 
         <strong>Комментарии</strong><br>
