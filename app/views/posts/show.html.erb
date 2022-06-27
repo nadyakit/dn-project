@@ -50,15 +50,31 @@
       <hr>
         
         <%= render @post.comments %>
-
+      <div class="please_reg">
         <h2 class="show_add_comment">Добавить комментарий</h2>
         <% if user_signed_in? %>
         <%= render "comments/form" %>
         <% else %>
         <p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
         <% end %>
+      </div>
+        <div class="footerGlobal">
+         <div class="footer"> 
+              <%= image_tag("LogoFooter.svg")%>
+              <div class="FooterInfo">
+                <p>B8project@mail.ru</p>
+                <div class="social">
+                <a href="">vk</a>
+                <a href="">telegram</a>
+                <a href="">youtube</a>
+                </div>
+              </div>
+          </div>
+          <hr>
+          <p>Электронная энциклопедия со статьями и подборками про продукты и витамины</p>
+          <p class="year">©2022 B8</p>
+        </div>
 
-        <% if user_signed_in? %>
-        <%= link_to 'Edit', edit_post_path(@post) %> |
-        <% end %>
+
 </div>
+

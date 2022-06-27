@@ -487,6 +487,46 @@ h1 {
 }
 
 .LikePart p {
-  margin-left: 2vw;
-  
+  margin-left: 2vw; 
+}
+
+.footer {
+  padding: 20vw 0 8vw 0;
+  font-family: 'Formular-Regular';
+  font-size: 18px;
+  display: flex;
+
+}
+
+.footerGlobal p {
+  text-align: center;
+}
+
+.social a{
+  font-size: 17px;
+  color: var(--blueberry-blue);
+  text-decoration: none;
+}
+
+.year {
+  font-family: 'Formular-Medium';
+  font-size: 17px;
+}
+.FooterInfo p {
+  font-size: 24px;
+  font-family: 'Formular-Medium';
+}
+
+.FooterInfo {
+  margin-left: 5vw;
+}
+
+.social {
+  display: flex;
+  width: 57vw;
+  justify-content: space-between;
+}
+
+.please_reg p {
+  padding-top: 7vw;
 }
