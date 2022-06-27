@@ -454,11 +454,7 @@ h1 {
   object-fit: cover;
 
 }
-.whole_show strong {
-  font-family: 'Formular-Medium';
-  font-size: 1.5vw;
-  margin: 2vw 1vw;
-}
+
 
 .whole_show p {
   font-size: 18px;
@@ -476,10 +472,21 @@ h1 {
 } 
 .show_add_comment {
   font-family: 'Formular-Medium';
-  font-size: 1vw;
-  margin: 1vw 1vw;
+  font-size: 24px;
+  padding-top: 7vw;
 }
 .new_comment {
   font-family: 'Formular-Regular';
-  font-size: 1vw;
+  font-size: 18px;
+  padding-top: 3vw;
+}
+
+.LikePart {
+  display: flex;
+  height: 8vw;
+}
+
+.LikePart p {
+  margin-left: 2vw;
+  
 }

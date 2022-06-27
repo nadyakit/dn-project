@@ -9,3 +9,33 @@
   grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
   grid-template-areas: "point1 point2 point3 point4 point5";
 }
+
+:root {
+  --peanut-butter: #F4ECE1;
+  --helium-pen: #281915;
+  --pepper-red: #FC4A27;
+  --light-red: #FC6C4F;
+  --blueberry-blue: #8EA5EB;
+  --highlighter: #E8FF4C;
+  --plum-purple: #E2B8E6;
+}
+
+.comment_graph textarea{
+  border-radius: 30px;
+  border: none;
+  box-shadow: 5px 3px 20px 1px rgba(78, 4, 70, 0.15);
+  font-family: "Formular-Regular";
+  font-size: 18px;
+  color: var(--helium-pen);
+  width: 70vw;
+}
+
+.actions_comments input{
+  border: none;
+  background-color: #E2B8E6;
+  font-family: "Formular-Regular";
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 2vw 5vw;
+  margin-top: 3vw;
+}
