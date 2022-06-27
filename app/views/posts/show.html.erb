@@ -23,18 +23,18 @@
       <% if user_signed_in? %>
         <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
         <% if pre_favorite %>
-            <%= link_to image_tag('fIconNone.svg'), post_favorite_path(@post, pre_favorite), method: :delete %>
+            <%= link_to image_tag('fIconActive.svg'), post_favorite_path(@post, pre_favorite), method: :delete %>
         <% else %>
-            <%= link_to image_tag('fIconActive.svg'), post_favorites_path(@post), method: :post %>
+            <%= link_to image_tag('fIconNone.svg'), post_favorites_path(@post), method: :post %>
         <% end %>
       <% end %>
   </div>
       <div class="show_image">
       	<%= image_tag(@post.image.url, alt: '') if @post.image?%>
       </div>
-
+      <div class="article_content">
         <%= @post.content.html_safe %><br>
-
+      </div>
         <p><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
 
         <% if user_signed_in? %>
